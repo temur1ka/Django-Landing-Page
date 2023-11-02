@@ -1,0 +1,59 @@
+<section id="learn" class="p-5">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md p-5">
+          <h2>Salaries in Each Field</h2>
+          <p class="lead">
+            Web technology professionals often earn substantial salaries due to their expertise in
+             a growing industry, where digital innovation and online presence are crucial for businesses.
+          </p>
+          <p>
+            Web technology professionals command high salaries as they play a pivotal role in our increasingly
+             digital world. Businesses rely on their skills for online presence, e-commerce, and app development, 
+             which drives demand and competitive compensation. With rapidly evolving web technologies,
+             the need for these experts continues to grow, contributing to their substantial earnings.
+          </p>
+          <a href="#" class="btn btn-light mt-3">
+            <i class="bi bi-chevron-right"></i> Read More
+          </a>
+        </div>
+        <div class="col-md">
+          <div>
+              <canvas id="myChartz" width="400" height="400"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+            <script>
+          
+          
+              const boom = document.getElementById('myChartz');
+              new Chart(boom, {
+                type: 'doughnut',
+                data: {
+                  labels: [ {% for item in sl %} '{{item.salary}}', {%endfor%} ],
+                  datasets: [{
+                    label: '',
+                    data: [{% for item in sl %} {{item.use}}, {%endfor%}],
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+            </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"
+></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>

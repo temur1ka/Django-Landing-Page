@@ -1,0 +1,105 @@
+{% extends "main.html" %} {% load static %} {% block content %}
+
+
+{% include "showcase.html" %}
+
+<!-- Boxes -->
+<section class="p-5">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md">
+        <div class="card text-light" style="background-color: #201e45">
+          <div class="card-body text-center">
+            <div class="h1 mb-3">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h3 class="card-title mb-3">Virtual</h3>
+            <p class="card-text">
+              Access our flexible virtual teaching for convenient, enriched learning. Join us today for an exceptional experience!            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div
+          class="card text-light"
+          style="background-color: rgb(65, 176, 171)"
+        >
+          <div class="card-body text-center">
+            <div class="h1 mb-3">
+              <i class="bi bi-person-square"></i>
+            </div>
+            <h3 class="card-title mb-3">Hybrid</h3>
+            <p class="card-text">
+              Combine in-person and virtual learning for an enriched educational experience. Join us for the best of both!
+            </p>
+            <a href="#" class="btn btn-dark">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-light" style="background-color: #201e45">
+          <div class="card-body text-center">
+            <div class="h1 mb-3">
+              <i class="bi bi-people"></i>
+            </div>
+            <h3 class="card-title mb-3">In Person</h3>
+            <p class="card-text">
+              Join us for a dynamic in-person learning experience, where personal interaction
+               and hands-on education create the path to your success. Enroll with us today!
+            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container p-4">
+  <p class="h1 text-center p-2">Our Trusted Companies</p>
+  <marquee scrollamount="12">
+  <div class="container">
+    <div class="row p-4">
+      <div class="col h5" style="color: #f07b7b; font-family: sans-serif;"><img style="height: 55px;" src="{% static 'brands/google.jpg' %}" alt=""></div>
+      <div class="col h5 text-success">
+        <img style="height: 55px;" src="{% static 'brands/sony.png' %}" alt="">
+      </div>
+      <div class="col h5" style="color: #f07b7b;font-family: sans-serif;"><img style="height: 55px;" src="{% static 'brands/amazon.png' %}" alt=""></div>
+      <div class="col h5 text-primary" style="font-family: sans-serif;">
+        <img style="height: 45px;" src="{% static 'brands/nike.png' %}" alt="">
+      </div>
+      <div class="col" style="color: #f07b7b;font-family: sans-serif;">
+        <img style="height: 55px;"  src="{% static 'brands/puma.png' %}" alt="">
+      </div>
+      <div class="col h5 text-danger" style="font-family: sans-serif;">
+        <img style="height: 55px;" src="{% static 'brands/burberry.png' %}" alt="">
+      </div>
+    </div>
+  </div>
+</marquee>
+</section>
+{% include "reactjs.html" %} 
+{% include "django.html" %} 
+{% include "Salary.html" %}
+{% include "contact.html" %}
+ 
+
+{% include "footer.html" %}
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"
+></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed("#auto", {
+    strings: [" Web Developer."],
+    typeSpeed: 45,
+    backSpeed: 60,
+    loop: true,
+  });
+</script>
+
+{% endblock %}
